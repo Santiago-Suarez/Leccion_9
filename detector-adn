@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+
+caracteristicas = {
+    "negro": "CCAGCAATCGC",
+    "castaño": "GCCAGTGCCG",
+    "rubio": "TTAGCTATCGC",
+    "cuadrada":"GCCACGG",
+    "redonda": "ACCACAA",
+    "ovalada": "AGGCCTCA",
+    "azul": "TTGTGGTGGC",
+    "verde": "GGGAGGTGGC",
+    "marron": "AAGTAGTGAC",
+    "hombre": "TGCAGGAACTTC",
+    "mujer": "TGAAGGACCTTC",
+    "blanca": "AAAACCTCA",
+    "negra": "CGACTACAG",
+    "asiatica": "CGCGGGCCG"}
+
+ladron = "ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTCCGGGGCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGACTTTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGACCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAATTACAGACCTGAA"
+
+nombre = raw_input("Introduce el nombre del sospechoso: ")
+
+while True:
+    sospecha1 = raw_input("¿De qué color es su pelo? (negro, castaño, rubio): ")
+    if not ladron.find(sospecha1) == -1:
+        print "descartado"
+        break
+
+    else:
+        print "el pelo coincide"
+        sospecha2 = raw_input("¿Qué forma tiene su cara?(cuadrada, redonda, ovalada): ")
+
+        if not ladron.find(sospecha2) == -1:
+            print "descartado"
+            break
+
+        else:
+            print "la forma de la cara coincide"
+            sospecha3 = raw_input("¿De qué color son sus ojos? (azul, verde, marron): ")
+            if not ladron.find(sospecha3) == -1:
+                print "descartado"
+                break
+
+            else:
+                print "el color de los ojos coincide"
+                sospecha4 = raw_input("¿Es hombre o mujer? (hombre/ mujer): ")
+                if not ladron.find(sospecha4) == -1:
+                    print "descartado"
+                    break
+
+                else:
+                    print "el sexo también coincide"
+                    sospecha5 = raw_input("¿De qué etnia es?(blanca, negra, asiatica):")
+                    if not ladron.find(sospecha5) == -1:
+                        print "descartado"
+                        break
+
+                    else:
+                        print "Tenemos al ladrón.¡Es %s !" % nombre
+                        break
